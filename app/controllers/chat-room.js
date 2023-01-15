@@ -11,7 +11,7 @@ export default class ChatRoomController extends Controller {
         let data = { comment: comment };
 
         // Send the POST request to the server
-        let response = await fetch('http://localhost:1313/comments', {
+        let response = await fetch('http://158.140.234.64:1313/comments', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ export default class ChatRoomController extends Controller {
 
     async pullComments() {
         // Make the get request to pull new comments
-        let response = await fetch('http://localhost:1313/comments');
+        let response = await fetch('http://158.140.234.64:1313/comments');
         let data = await response.json();
 
         // TODO: This should be extracted to a method but i do not have time.

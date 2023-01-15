@@ -7,7 +7,7 @@ export default class ChatRoomRoute extends Route {
 
     async model() {
         // Make a request to the API
-        let response = await fetch('http://localhost:1313/comments');
+        let response = await fetch('http://158.140.234.64:1313/comments');
         let data = await response.json();
 
         // Format the time for each comment

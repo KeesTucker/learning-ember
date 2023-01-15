@@ -2,6 +2,11 @@
 
 <div id="container">
     <h1>welcome to the worlds most insecure chat room</h1>
+    <div>
+        <label for="comment-field">Send Comment:</label>
+        <input type="text" id="comment-field" value={{this.newComment}} oninput={{action (mut this.newComment) value="target.value"}}>
+    </div>
+    <button type="button" {{action 'send' on='click'}}>Send Comment</button>
     {{#each @model.comments as |comment|}}
         <div class="comment">
             <h3>{{comment._time}}</h3>

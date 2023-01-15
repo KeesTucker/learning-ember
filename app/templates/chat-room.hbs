@@ -1,15 +1,13 @@
 {{page-title "ChatRoom"}}
 
 <div id="container">
-  <h1>welcome to the worlds most insecure chat room</h1>
-  {{#each @model.comments as |comment|}}
-  
-  <div class="comment">
-    <h3>{{comment._time}}</h3>
-    <p>{{comment.comment}}</p>
-  </div>
-  
-  {{/each}}
+    <h1>welcome to the worlds most insecure chat room</h1>
+    {{#each @model.comments as |comment|}}
+        <div class="comment">
+            <h3>{{comment._time}}</h3>
+            <p>{{comment.comment}}</p>
+        </div>
+    {{/each}}
 </div>
-  
+
 {{outlet}}
